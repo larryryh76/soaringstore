@@ -162,7 +162,10 @@ window.addEventListener('scroll', function() {
     header.classList.remove('fixed');
   }
 });
-
+// Add event listener for mobile devices
+document.addEventListener("touchstart", function () {
+    console.log("Touch event detected!");
+});
 </script>
 </body>
 </html>
