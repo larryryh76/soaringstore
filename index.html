@@ -13,6 +13,7 @@
             <h1>Soaring m<span class="art-deco">Art</span></h1>
             <p>making buying a delight.......</p>
            </div>
+        <div class="hamburger-icon">&equiv;</div>
         <nav>
             <ul>
                 <li> <a href="home">Home</a></li>
@@ -154,45 +155,13 @@
     </footer>
 
 <script>
-window.addEventListener('scroll', function() {
-  const header = document.querySelector('.header');
-  if (window.scrollY > 0) {
-    header.classList.add('fixed');
-  } else {
-    header.classList.remove('fixed');
-  }
-});
-
-   // Get the navigation menu and hamburger icon
-const navMenu = document.querySelector('nav ul');
-const hamburgerIcon = document.createElement('div');
-
-// Add the hamburger icon
-hamburgerIcon.innerHTML = '&equiv;';
-hamburgerIcon.classList.add('hamburger-icon');
-document.querySelector('header').appendChild(hamburgerIcon);
-
-// Toggle the navigation menu on small screens
-hamburgerIcon.addEventListener('click', () => {
-  navMenu.classList.toggle('active');
-});
-
-// Add a media query to toggle the navigation menu on small screens
-const mediaQuery = window.matchMedia('(max-width: 600px)');
-mediaQuery.addEventListener('change', () => {
-  if (mediaQuery.matches) {
-    navMenu.classList.add('active');
-  } else {
-    navMenu.classList.remove('active');
-  }
-}); 
-
-    const hamburgerIcon = document.querySelector('.hamburger-icon');
+const hamburgerIcon = document.querySelector('.hamburger-icon');
 const navMenu = document.querySelector('nav ul');
 
 hamburgerIcon.addEventListener('click', () => {
   navMenu.classList.toggle('active');
 });
+    
 </script>
 </body>
 </html>
