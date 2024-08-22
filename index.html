@@ -162,21 +162,30 @@ window.addEventListener('scroll', function() {
     header.classList.remove('fixed');
   }
 });
-// Add event listener for mobile devices
-document.addEventListener("touchstart", function () {
-    console.log("Touch event detected!");
+
+   // Get the navigation menu and hamburger icon
+const navMenu = document.querySelector('nav ul');
+const hamburgerIcon = document.createElement('div');
+
+// Add the hamburger icon
+hamburgerIcon.innerHTML = '&equiv;';
+hamburgerIcon.classList.add('hamburger-icon');
+document.querySelector('header').appendChild(hamburgerIcon);
+
+// Toggle the navigation menu on small screens
+hamburgerIcon.addEventListener('click', () => {
+  navMenu.classList.toggle('active');
 });
 
-// Touch and Click events
-document.addEventListener("touchstart", function () {
-  console.log("Touch event detected!");
-});
-
-document.addEventListener("click", function () {
-  console.log("Click event detected!");
-});
-
-    
+// Add a media query to toggle the navigation menu on small screens
+const mediaQuery = window.matchMedia('(max-width: 600px)');
+mediaQuery.addEventListener('change', () => {
+  if (mediaQuery.matches) {
+    navMenu.classList.add('active');
+  } else {
+    navMenu.classList.remove('active');
+  }
+}); 
 </script>
 </body>
 </html>
