@@ -186,6 +186,13 @@ mediaQuery.addEventListener('change', () => {
     navMenu.classList.remove('active');
   }
 }); 
+
+    const hamburgerIcon = document.querySelector('.hamburger-icon');
+const navMenu = document.querySelector('nav ul');
+
+hamburgerIcon.addEventListener('click', () => {
+  navMenu.classList.toggle('active');
+});
 </script>
 </body>
 </html>
