@@ -127,8 +127,8 @@ header {
     text-align: center;
     color: #0022ff;
     transition: transform 0.5s ease;
-    width: 150px;
-    height: 50px;
+    width: 200px;
+   
   }
   
   .hero-text:hover {
