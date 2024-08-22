@@ -8,29 +8,41 @@ body {
  
    background-image: linear-gradient(90deg, rgb(187, 187, 187), rgb(197, 197, 197));
 } 
+/* Add this to your existing CSS file */
 
+.hamburger-icon {
+  display: none; /* Hide the icon on large screens */
+  cursor: pointer;
+}
+
+nav ul {
+  display: flex;
+  flex-direction: column; /* Stack the menu items vertically on small screens */
+}
+
+nav ul.active {
+  display: flex;
+  flex-direction: column;
+}
 
 @media only screen and (max-width: 600px) {
-  /* Styles for small screens */
-  header {
-    padding: 5px;
+  .hamburger-icon {
+    display: block; /* Show the icon on small screens */
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 24px;
   }
   nav ul {
+    display: none; /* Hide the menu on small screens */
+  }
+  nav ul.active {
+    display: flex;
     flex-direction: column;
-  }
-  main {
-    padding: 10px;
-  }
-  button {
-    padding: 5px 10px;
   }
 }
 
-/* Animations */
-button:hover {
-  transform: scale(1.1);
-  transition: 0.3s ease-in-out;
-}
+
 
 
 header {
